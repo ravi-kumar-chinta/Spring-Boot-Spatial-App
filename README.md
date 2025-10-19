@@ -30,29 +30,31 @@ This application lets you **view, edit, and manage geographic data** on a map in
    cd interactive-spatial-webapp
 ```
 2. Ensure you have Java 17, Maven, and Docker installed.
+
 3. Run the application:
 ```bash
 mvn spring-boot:run
 ```
 
-Open your browser at `http://localhost:8080`
+4. Open your browser at `http://localhost:8080`
 
 ---
 
 # Tech Stack
 
-Backend: Java, Spring Boot, Hibernate Spatial
+- Backend: Java, Spring Boot, Hibernate Spatial
 
-Frontend: Vaadin, MapLibreGL
+- Frontend: Vaadin, MapLibreGL
 
-Database: PostgreSQL/PostGIS, H2GIS, MySQL
+- Database: PostgreSQL/PostGIS, H2GIS, MySQL
 
-Dev Tools: Docker, TestContainers
+- Dev Tools: Docker, TestContainers
 
 ---
 
-Author: Ravi Kumar Chinta
-GitHub: https://github.com/ravi-kumar-chinta
+**Author:** Ravi Kumar Chinta
+**GitHub:** https://github.com/ravi-kumar-chinta
+**Mail:** chintharavikumar9908@gmail.com
 
 ---
 # Thank You
