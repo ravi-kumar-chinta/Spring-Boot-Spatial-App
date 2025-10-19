@@ -1,18 +1,61 @@
-# A Spring Boot example editing spatial data in relational database
+# Interactive Spatial WebApp
 
-![Alt text](./screenshot.png?raw=true "Screenshot")
+![Screenshot](./screenshot.png)
 
-This is a small example app that shows how one can use:
+**Interactive Spring Boot web application for managing spatial data in a relational database.**
 
- * [Spring Boot](http://projects.spring.io/spring-boot/) and [Spring Data](https://spring.io/projects/spring-data)
- * Latest [Hibernate](http://hibernate.org/orm/) with spatial features. At the application API, only standard JPA stuff (and Spring Data) is used.
- * ~~The example also uses [QueryDSL](http://www.querydsl.com) spatial query as an example. QueryDSL contain excellent support for spatial types.~~ QueryDSL example replaced with plain JPQL(with Hibernate spatial extensions) as the latest version is not compatible with latest JTS/Hibernate. See https://github.com/querydsl/querydsl/issues/2404. If you want to see the example of QueryDSL usage in this setup, check out a bit older version of the example.
- * Relational database, like PostGis (default, Postgres + extentiosn), H2GIS or MySQL, which supports basic spatial types. The example automatically launches Docker image with PostGis for the demo using TestContainers, if run via TestApp class in src/test/java/org/vaadin/example. Not that Hibernate might need tiny adjustments for other databases.
- * [Vaadin](https://vaadin.com/) and [MapLibreGL }> add-on](https://vaadin.com/directory/component/maplibregl--add-on) to build the UI layer. MapLibre add-on is a Vaadin wrapper for [MapLibre GL JS](https://github.com/maplibre/maplibre-gl-js) slippy map widget and [mapbox-gl-draw](https://github.com/mapbox/mapbox-gl-draw). Its Vaadin field implementations which make it dead simple to edit [JTS](https://locationtech.github.io/jts/) data types directly from the JPA entities.
- * As base layer for maps, crisp vector format [OpenStreetMap](https://www.openstreetmap.org/) data via [MapTiler](https://www.maptiler.com) is used, but naturally any common background map can be used.
+## Features
 
-...to build a full-stack web app handling spatial data efficiently.
+- **Backend:** Built with [Spring Boot](https://spring.io/projects/spring-boot) and [Spring Data JPA](https://spring.io/projects/spring-data) for efficient data management.
+- **Spatial Support:** Uses [Hibernate Spatial](http://hibernate.org/orm/) to handle geographical data types and spatial queries.
+- **Database:** Supports PostGIS (PostgreSQL + spatial extensions), H2GIS, or MySQL. Docker + TestContainers integration available for PostGIS demo.
+- **Frontend:** Interactive map UI using [Vaadin](https://vaadin.com/) with [MapLibreGL](https://vaadin.com/directory/component/maplibregl--add-on) for editing geographic features directly.
+- **Base Map:** Vector maps via [OpenStreetMap](https://www.openstreetmap.org/) and [MapTiler](https://www.maptiler.com) (or any standard map layer).
+- **Efficient Queries:** Optimized database structure allows fast queries and dynamic viewport-based data loading.
 
-As the data is in an optimized form in the DB, it is possible to create efficient queries to the backend and e.g. only show features relevant to the current viewport of the map visualizing features or what ever you can with the spatial queries.
+## What It Does
 
-Enjoy!
+This application lets you **view, edit, and manage geographic data** on a map in real time. You can handle points, lines, and polygons with backend persistence in the database.  
+
+**Use Cases:**
+- GIS data management  
+- Map-based dashboards  
+- Spatial data visualization  
+
+## Getting Started
+
+1. Clone the repository:  
+```bash
+   git clone https://github.com/<your-username>/interactive-spatial-webapp.git
+   cd interactive-spatial-webapp
+```
+2. Ensure you have Java 17, Maven, and Docker installed.
+3. Run the application:
+```bash
+mvn spring-boot:run
+```
+
+Open your browser at `http://localhost:8080`
+
+---
+
+# Tech Stack
+
+Backend: Java, Spring Boot, Hibernate Spatial
+
+Frontend: Vaadin, MapLibreGL
+
+Database: PostgreSQL/PostGIS, H2GIS, MySQL
+
+Dev Tools: Docker, TestContainers
+
+---
+
+Author: Ravi Kumar Chinta
+GitHub: https://github.com/ravi-kumar-chinta
+
+---
+# Thank You
+
+**Thank you for checking out this project!**
+Feel free to explore, contribute, or provide feedback. 😊
