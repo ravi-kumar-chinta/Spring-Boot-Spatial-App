@@ -44,11 +44,11 @@ mvn spring-boot:run
 
 - Backend: Java, Spring Boot, Hibernate Spatial
 
-- Frontend: Vaadin, MapLibreGL
+- **Frontend:** Vaadin, MapLibreGL
 
-- Database: PostgreSQL/PostGIS, H2GIS, MySQL
+- **Database:** PostgreSQL/PostGIS, H2GIS, MySQL
 
-- Dev Tools: Docker, TestContainers
+- **Dev Tools:** Docker, TestContainers
 
 ---
 
